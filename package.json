@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "scripts": {
+  "scripts":  {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "NODE_ENV=development ./node_modules/.bin/netlify-lambda serve src",
-    "build": "NODE_ENV=production ./node_modules/.bin/netlify-lambda build src"
+    "start": "NODE_ENV=development NODE_OPTIONS='--openssl-legacy-provider' ./node_modules/.bin/netlify-lambda serve src",
+    "build": "set NODE_ENV=production NODE_OPTIONS='--openssl-legacy-provider' && D:/projekty/backend-wypakuj/node_modules/.bin/netlify-lambda build src"
   },
   "keywords": [],
   "author": "",

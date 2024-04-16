@@ -24,7 +24,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(cors({
-    origin: "https://wypakujmnie.pl/"
+    origin: "https://wypakujmnie.pl"
 }));
 app.use(express.static('dist'));
 app.use(express.json());

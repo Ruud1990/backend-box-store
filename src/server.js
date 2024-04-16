@@ -23,8 +23,10 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY_PROD);
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(cors());
-app.use(express.static('public_html/static'));
+app.use(cors({
+    origin: "https://wypakujmnie.pl/"
+}));
+app.use(express.static('dist'));
 app.use(express.json());
 
 app.post("/checkout", async (req, res) => {

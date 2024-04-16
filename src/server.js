@@ -25,7 +25,8 @@ const port = process.env.PORT || 3000;
 
 app.use(cors({
     origin: "https://wypakujmnie.pl",
-    allowedHeaders: ['Content-Type']
+    allowedHeaders: ['Content-Type'],
+    methods: ['GET', 'POST'],
 }));
 app.use(express.static('dist'));
 app.use(express.json());

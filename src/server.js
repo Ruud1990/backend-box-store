@@ -24,7 +24,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(cors({
-    origin: "https://master--wypakuj.netlify.app/",
+    origin: "*",
     allowedHeaders: ['Content-Type'],
     methods: ['GET', 'POST'],
 }));
